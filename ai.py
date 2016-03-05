@@ -1,4 +1,15 @@
-class tictactoegame: def init(self, t): self.board=[[0,0,0], [0,0,0], [0,0,0]] self.turn=t def canPlacePiece(self, x, y): if self.board[x][y] == 0: return True else: return False def place_piece(self,x,y): if self.canPlacePiece(x, y) == True: self.board[x][y] = self.turn self.next_turn()
+class tictactoegame: 
+    def init(self, t): 
+        self.board=[[0,0,0], [0,0,0], [0,0,0]] 
+        self.turn=t def canPlacePiece(self, x, y): i
+            f self.board[x][y] == 0: 
+                return True 
+            else: 
+                return False 
+    def place_piece(self,x,y): 
+        if self.canPlacePiece(x, y) == True: 
+            self.board[x][y] = self.turn 
+            self.next_turn()
 
 def print_board(self):
     for x in range(0,3):
@@ -39,4 +50,6 @@ def computer_move(self):
     #then the human plays
 game = tictactoegame(1)
 
-while game.has_won() == 0: game.print_board() game.place_piece(input("Enter a row:"), input("Enter a column: "))
+while game.has_won() == 0: 
+    game.print_board() 
+    game.place_piece(input("Enter a row:"), input("Enter a column: "))
